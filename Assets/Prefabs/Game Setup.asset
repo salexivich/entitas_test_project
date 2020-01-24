@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b03c47cbc8ea4f07b35d501b1deb9fc, type: 3}
+  m_Name: Game Setup
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 7416753351111777253, guid: b5b8ed53c35e2431d9307b82a4cf94b3,
+    type: 3}
+  laser: {fileID: 3799246987885323967, guid: c9034fa69c025457f8fff52aaf1d55f0, type: 3}
+  rotationSpeed: 180
+  playerMovementSpeed: 5
+  laserSpeed: 10
+  bigs:
+  - {fileID: 1126875727370845111, guid: b17620bbec11c4efaaa5505c507138f1, type: 3}
+  - {fileID: 7047973168800834776, guid: 69fc5ebfd7ee04b58bbc3a6183637265, type: 3}
+  meds:
+  - {fileID: 1163580928773899326, guid: 77253d7ce52fc407196222a0241908b7, type: 3}
+  - {fileID: 1507644505806160322, guid: 75ce518fac3c8425db9eb90c0e47a0a8, type: 3}
+  smalls:
+  - {fileID: 8956642149851164406, guid: 9328b0c35537747108c0667556725b82, type: 3}
+  - {fileID: 5692996119189397522, guid: cdf7093f312fa460d82d1b0f43739e95, type: 3}
+  tinys:
+  - {fileID: 4432097402022079003, guid: db0d6e1acceb24cc18a089e2dbccb82a, type: 3}
+  - {fileID: 6688387341331296099, guid: d97e6ebbbcf6041d6b6a1cb5c9836c72, type: 3}

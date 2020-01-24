@@ -1,0 +1,37 @@
+using UnityEngine;
+using Entitas;
+using Entitas.Unity;
+using System.Collections.Generic;
+
+public class DestroySystem : ReactiveSystem<GameEntity>
+{
+    private Contexts _contexts;
+    public DestroySystem(Contexts contexts) : base(contexts.game)
+    {
+        _contexts = contexts;
+    }
+
+    protected override void Execute(List<GameEntity> entities)
+    {
+        foreach (var entity in entities)
+        {   
+            if (entity.hasView == true)
+            {
+                var view = entity.view.value;
+                view.Unlink();
+                Object.Destroy(view);
+            }
+            entity.Destroy();
+        }
+    }
+
+    protected override bool Filter(GameEntity entity)
+    {
+        return entity.isDestroy;
+    }
+
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    {
+        return context.CreateCollector(GameMatcher.AnyOf(GameMatcher.Destroy));
+    }
+}
